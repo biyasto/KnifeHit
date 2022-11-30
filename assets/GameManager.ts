@@ -112,6 +112,10 @@ export class GameManager extends Component {
     {
         GameManager.state=2;
     }
+    Restart()
+    {
+        director.loadScene('main-001')
+    }
 
 }
 

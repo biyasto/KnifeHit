@@ -10,8 +10,6 @@ export class Knife extends Component {
     @property({type: RigidBody2D})
     public BodyAnim: RigidBody2D|null = null;
 
-    @property({type: Wood})
-    public wood: Wood|null = null;
 
     @property
     state: number = 2;
@@ -19,10 +17,13 @@ export class Knife extends Component {
     @property
     travelSpeed = 400;
 
+    @property({type: Wood})
+    public wood: Wood|null = null;
+
     @property angle: number = 0;
 
     start () {
-        // [3]
+
         if(this.state !=1) { //normal knife
             this.state = 2;
             this.angle = -this.wood.node.eulerAngles.z;
@@ -70,6 +71,7 @@ export class Knife extends Component {
         if (this.state == 1 && otherCollider.tag ==1) // knife on wood collider with other knife (tag == 1)
         {
             console.log('onBeginContact' + otherCollider.tag);
+
             GameManager.GameOver();
         }
     }

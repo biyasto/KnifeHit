@@ -185,9 +185,9 @@
     "BodyAnim": {
       "__id__": 6
     },
-    "wood": null,
-    "state": 10,
+    "state": 2,
     "travelSpeed": 800,
+    "wood": null,
     "angle": 0,
     "_id": ""
   },
